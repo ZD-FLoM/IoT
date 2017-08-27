@@ -1,17 +1,17 @@
-#define LEDPIN 6
+#define LEDPIN 2
 
   // MKR1000 Pin 6 is built in LED
 
 
-#define SENSORPIN 7
+#define SENSORPIN 9
 
 int sensorState = 0;
 int lastState = 0;         
 
 void setup() {
-  // initialize the LED pin as an output:
+  // set the LED pin as an output:
   pinMode(LEDPIN, OUTPUT);      
-  // initialize the sensor pin as an input:
+  // set the sensor pin as an input:
   pinMode(SENSORPIN, INPUT);     
   digitalWrite(SENSORPIN, HIGH); // turn on the pullup
   
@@ -23,14 +23,14 @@ void loop(){
   sensorState = digitalRead(SENSORPIN);
 
   // check if the sensor beam is obstructed
-  // if it is, the sensorState is LOW:
-  if (sensorState == LOW) {     
+  // if it is, the sensorState is HIGH:
+  if (sensorState == HIGH) {     
     // turn LED on:
-    digitalWrite(LEDPIN, HIGH);  
+    digitalWrite(LEDPIN, LOW);  
   } 
   else {
-    // turn LED off:
-    digitalWrite(LEDPIN, LOW); 
+    // turn LED on:
+    digitalWrite(LEDPIN, HIGH); 
   }
   lastState = sensorState;
 }

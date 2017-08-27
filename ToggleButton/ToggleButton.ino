@@ -9,8 +9,8 @@
   - 15K resistor attached to pin 2 from ground
 */
 
-const int buttonPin = 8;     // the number of the pushbutton pin
-const int ledPin =  3;      // the number of the LED pin
+const int buttonPin = 7;     // the number of the pushbutton pin
+const int ledPin =  4;      // the number of the LED pin
 
 // variables will change:
 int buttonState = 0;         // variable for reading the pushbutton status
@@ -23,10 +23,10 @@ void setup() {
 }
 
 void loop() {
-  // read the state of pin 8:
+  // read the state of pin 7:
   buttonState = digitalRead(buttonPin);
 
-  // check if pin 8 is recieving a signal. If it is, the buttonState is HIGH:
+  // check if pin 7 is recieving a signal. If it is, the buttonState is HIGH:
   if (buttonState == HIGH) {
     // turn LED on:
     digitalWrite(ledPin, HIGH);

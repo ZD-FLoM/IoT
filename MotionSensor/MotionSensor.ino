@@ -2,8 +2,8 @@
  * PIR sensor
  */
  
-int ledPin = 6;                //LED
-int inputPin = 8;               // input pin
+int ledPin = 5;                //LED
+int inputPin = 6;               // input pin
 int pirState = LOW;             // no motion
 int val = 0;                    // pin status
  
